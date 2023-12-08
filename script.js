@@ -13,3 +13,19 @@ function getrandomColor(){
     return color;
 
 }
+
+function flashColors(){
+    var flashes = document.querySelectorAll(".flash")
+    flashes.forEach(function(flash){
+        var randomColor = getrandomColor()
+        flash.style.backgroundColor = randomColor
+    })
+    
+
+}
+setInterval(flashColors, 0.1)
+
+var newH2 = document.createElement("h2")
+newH2.innerHTML = "Super fast"
+newH2.setAttribute("style", "backgroundColor: gold")
+document.body.appendChild(newH2)
